@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "slogan": "Explore the Infinite Possibilities of Technology",
+    "tagCloud": "Tag Cloud"
+  },
+  "tags": {
+    "all": "All",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "ai": "AI",
+    "design": "Design",
+    "architecture": "Architecture",
+    "cloud": "Cloud Native",
+    "devops": "DevOps",
+    "security": "Security"
+  },
+  "carousel": {
+    "slide1": {
+      "title": "Future Tech",
+      "subtitle": "Explore the frontier of AI and quantum computing"
+    },
+    "slide2": {
+      "title": "Digital Creativity",
+      "subtitle": "Reshape user experience with design thinking"
+    },
+    "slide3": {
+      "title": "Tech Insights",
+      "subtitle": "Deep dive into architecture and best practices"
+    }
+  },
+  "article": {
+    "views": "views",
+    "readMore": "Read More"
+  },
+  "timeline": {
+    "title": "Timeline"
+  },
+  "footer": {
+    "copyright": "All Rights Reserved",
+    "about": "About",
+    "contact": "Contact",
+    "github": "GitHub",
+    "rss": "RSS"
+  },
+  "theme": {
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "language": {
+    "en": "EN",
+    "zh": "中文"
+  }
+}

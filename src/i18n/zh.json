@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "slogan": "探索科技的无限可能",
+    "tagCloud": "标签云"
+  },
+  "tags": {
+    "all": "全部",
+    "frontend": "前端",
+    "backend": "后端",
+    "ai": "人工智能",
+    "design": "设计",
+    "architecture": "架构",
+    "cloud": "云原生",
+    "devops": "DevOps",
+    "security": "安全"
+  },
+  "carousel": {
+    "slide1": {
+      "title": "未来科技",
+      "subtitle": "探索人工智能与量子计算的前沿领域"
+    },
+    "slide2": {
+      "title": "数字创意",
+      "subtitle": "用设计思维重塑用户体验"
+    },
+    "slide3": {
+      "title": "技术洞见",
+      "subtitle": "深入剖析架构设计与最佳实践"
+    }
+  },
+  "article": {
+    "views": "阅读",
+    "readMore": "阅读全文"
+  },
+  "timeline": {
+    "title": "时间线"
+  },
+  "footer": {
+    "copyright": "版权所有",
+    "about": "关于",
+    "contact": "联系",
+    "github": "GitHub",
+    "rss": "RSS"
+  },
+  "theme": {
+    "dark": "深色",
+    "light": "浅色"
+  },
+  "language": {
+    "en": "EN",
+    "zh": "中文"
+  }
+}
