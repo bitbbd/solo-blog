@@ -1,0 +1,215 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Vue 3 Composition API 深度解析",
+      "titleEn": "Deep Dive into Vue 3 Composition API",
+      "excerpt": "深入探索 Vue 3 的 Composition API，了解如何利用组合式函数构建更加模块化和可复用的代码结构。",
+      "excerptEn": "Explore Vue 3's Composition API in depth and learn how to build more modular and reusable code structures with composables.",
+      "coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
+      "tags": ["frontend"],
+      "date": "2024-03-15",
+      "views": 2847,
+      "author": "TechBlog"
+    },
+    {
+      "id": 2,
+      "title": "Kubernetes 集群安全最佳实践",
+      "titleEn": "Kubernetes Cluster Security Best Practices",
+      "excerpt": "从网络策略、RBAC 权限控制、Secret 管理等多维度讲解 K8s 集群安全加固的完整指南。",
+      "excerptEn": "A comprehensive guide to Kubernetes cluster security hardening covering network policies, RBAC, Secret management, and more.",
+      "coverImage": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&q=80",
+      "tags": ["cloud", "security"],
+      "date": "2024-03-10",
+      "views": 1956,
+      "author": "TechBlog"
+    },
+    {
+      "id": 3,
+      "title": "AI 大模型微调技术探索",
+      "titleEn": "Exploring Fine-tuning Techniques for Large AI Models",
+      "excerpt": "全面解析 LLM 微调的各类方法，包括 LoRA、P-tuning 等高效微调技术的原理与实践。",
+      "excerptEn": "Comprehensive analysis of LLM fine-tuning methods, including the principles and practices of efficient techniques like LoRA and P-tuning.",
+      "coverImage": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+      "tags": ["ai"],
+      "date": "2024-03-05",
+      "views": 4521,
+      "author": "TechBlog"
+    },
+    {
+      "id": 4,
+      "title": "微服务架构设计模式",
+      "titleEn": "Microservices Architecture Design Patterns",
+      "excerpt": "深入理解 Saga、CQRS、事件溯源等微服务核心设计模式，构建高可用分布式系统。",
+      "excerptEn": "Deep understanding of core microservices design patterns including Saga, CQRS, and Event Sourcing for building highly available distributed systems.",
+      "coverImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+      "tags": ["architecture", "backend"],
+      "date": "2024-02-28",
+      "views": 3284,
+      "author": "TechBlog"
+    },
+    {
+      "id": 5,
+      "title": "TypeScript 类型体操完全指南",
+      "titleEn": "Complete Guide to TypeScript Type Manipulation",
+      "excerpt": "掌握 TypeScript 高级类型技巧，从条件类型、映射类型到模板字面量类型的完整教程。",
+      "excerptEn": "Master advanced TypeScript type techniques, from conditional types and mapped types to template literal types.",
+      "coverImage": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&q=80",
+      "tags": ["frontend"],
+      "date": "2024-02-20",
+      "views": 2156,
+      "author": "TechBlog"
+    },
+    {
+      "id": 6,
+      "title": "DevOps 流水线自动化实践",
+      "titleEn": "DevOps Pipeline Automation Practices",
+      "excerpt": "从 CI/CD 流程设计到自动化测试、部署策略，打造高效的 DevOps 工作流。",
+      "excerptEn": "From CI/CD pipeline design to automated testing and deployment strategies, build an efficient DevOps workflow.",
+      "coverImage": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&q=80",
+      "tags": ["devops"],
+      "date": "2024-02-15",
+      "views": 1879,
+      "author": "TechBlog"
+    },
+    {
+      "id": 7,
+      "title": "现代 UI 设计趋势与实践",
+      "titleEn": "Modern UI Design Trends and Practices",
+      "excerpt": "探索 2024 年最新的 UI 设计趋势，从玻璃拟态到 3D 界面设计的完整解析。",
+      "excerptEn": "Explore the latest UI design trends of 2024, from glassmorphism to 3D interface design.",
+      "coverImage": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80",
+      "tags": ["design"],
+      "date": "2024-02-10",
+      "views": 2634,
+      "author": "TechBlog"
+    },
+    {
+      "id": 8,
+      "title": "Go 并发编程实战",
+      "titleEn": "Go Concurrency Programming in Practice",
+      "excerpt": "深入理解 Goroutine、Channel 和 Context，掌握 Go 语言高效并发编程的核心技能。",
+      "excerptEn": "Deep understanding of Goroutines, Channels, and Context to master Go's efficient concurrency programming.",
+      "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+      "tags": ["backend"],
+      "date": "2024-02-05",
+      "views": 2341,
+      "author": "TechBlog"
+    },
+    {
+      "id": 9,
+      "title": "响应式设计系统构建",
+      "titleEn": "Building a Responsive Design System",
+      "excerpt": "从设计令牌到组件库，构建一套完整、可扩展的设计系统解决方案。",
+      "excerptEn": "From design tokens to component libraries, build a complete and scalable design system solution.",
+      "coverImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+      "tags": ["design", "frontend"],
+      "date": "2024-01-28",
+      "views": 1987,
+      "author": "TechBlog"
+    },
+    {
+      "id": 10,
+      "title": "云原生架构演进之路",
+      "titleEn": "The Evolution of Cloud Native Architecture",
+      "excerpt": "从传统架构到云原生的演进历程，详解容器化、微服务、服务网格等技术选型。",
+      "excerptEn": "The evolution from traditional to cloud-native architecture, with detailed analysis of containerization, microservices, and service mesh technology selection.",
+      "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+      "tags": ["cloud", "architecture"],
+      "date": "2024-01-20",
+      "views": 3102,
+      "author": "TechBlog"
+    },
+    {
+      "id": 11,
+      "title": "Web3.0 与区块链技术展望",
+      "titleEn": "Web3.0 and Blockchain Technology Outlook",
+      "excerpt": "深入理解 Web3.0 的核心理念，探讨区块链技术在去中心化应用中的创新应用。",
+      "excerptEn": "Deep understanding of the core concepts of Web3.0 and exploring innovative applications of blockchain technology in decentralized applications.",
+      "coverImage": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80",
+      "tags": ["backend"],
+      "date": "2024-01-15",
+      "views": 2765,
+      "author": "TechBlog"
+    },
+    {
+      "id": 12,
+      "title": "前端性能优化完全手册",
+      "titleEn": "Complete Frontend Performance Optimization Handbook",
+      "excerpt": "从加载性能到渲染优化，从资源压缩到缓存策略，打造极致的前端体验。",
+      "excerptEn": "From loading performance to rendering optimization, from resource compression to caching strategies, create the ultimate frontend experience.",
+      "coverImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+      "tags": ["frontend"],
+      "date": "2024-01-10",
+      "views": 3421,
+      "author": "TechBlog"
+    }
+  ],
+  "tags": [
+    {
+      "id": "frontend",
+      "name": "前端",
+      "nameEn": "Frontend",
+      "color": "#00d4aa"
+    },
+    {
+      "id": "backend",
+      "name": "后端",
+      "nameEn": "Backend",
+      "color": "#7c5cff"
+    },
+    {
+      "id": "ai",
+      "name": "人工智能",
+      "nameEn": "AI",
+      "color": "#ff6b6b"
+    },
+    {
+      "id": "design",
+      "name": "设计",
+      "nameEn": "Design",
+      "color": "#feca57"
+    },
+    {
+      "id": "architecture",
+      "name": "架构",
+      "nameEn": "Architecture",
+      "color": "#54a0ff"
+    },
+    {
+      "id": "cloud",
+      "name": "云原生",
+      "nameEn": "Cloud Native",
+      "color": "#5f27cd"
+    },
+    {
+      "id": "devops",
+      "name": "DevOps",
+      "nameEn": "DevOps",
+      "color": "#00d2d3"
+    },
+    {
+      "id": "security",
+      "name": "安全",
+      "nameEn": "Security",
+      "color": "#ff9f43"
+    }
+  ],
+  "carousel": [
+    {
+      "id": 1,
+      "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80",
+      "alt": "Future Technology"
+    },
+    {
+      "id": 2,
+      "url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1600&q=80",
+      "alt": "Digital World"
+    },
+    {
+      "id": 3,
+      "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80",
+      "alt": "Innovation"
+    }
+  ]
+}

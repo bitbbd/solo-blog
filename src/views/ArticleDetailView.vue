@@ -218,12 +218,19 @@ const relatedArticles = computed(() => {
     .slice(0, 3)
 })
 
-const fetchArticle = async () => {
+const articleModules = import.meta.glob('/src/data/*.json', { eager: true })
+
+const fetchArticle = () => {
   loading.value = true
   try {
-    const response = await fetch(`/src/data/${props.id}.json`)
-    if (response.ok) {
-      article.value = await response.json()
+    const articleId = String(props.id)
+    const matchedModule = Object.entries(articleModules).find(([path]) => {
+      const fileName = path.split('/').pop()
+      return fileName === `${articleId}.json`
+    })
+    
+    if (matchedModule) {
+      article.value = matchedModule[1].default
     } else {
       article.value = null
     }
