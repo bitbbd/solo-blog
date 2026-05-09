@@ -23,6 +23,7 @@
               v-for="article in articles" 
               :key="article.id"
               class="timeline-item"
+              :data-article-id="article.id"
               :class="{ 
                 'current': store.currentArticleId === article.id,
                 'hovered': hoveredArticleId === article.id
@@ -57,16 +58,40 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch, nextTick } from 'vue'
+import { useRouter } from 'vue-router'
 import { useBlogStore } from '../store/blog'
 
+const router = useRouter()
 const store = useBlogStore()
 const timelineRef = ref(null)
 const hoveredArticleId = ref(null)
 
+watch(() => store.currentArticleId, async (newId) => {
+  if (newId && timelineRef.value) {
+    await nextTick()
+    scrollToArticle(newId)
+  }
+}, { immediate: true })
+
+const scrollToArticle = (articleId) => {
+  if (!timelineRef.value) return
+  
+  const articleElements = timelineRef.value.querySelectorAll('.timeline-item')
+  for (const element of articleElements) {
+    const elementArticleId = parseInt(element.dataset.articleId)
+    if (elementArticleId === articleId) {
+      element.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'center' 
+      })
+      break
+    }
+  }
+}
+
 const handleItemClick = (article) => {
-  store.setCurrentArticle(article.id)
-  console.log('Navigate to article from timeline:', article.id)
+  router.push(`/article/${article.id}`)
 }
 
 const getTagColor = (tagId) => {

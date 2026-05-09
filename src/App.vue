@@ -1,29 +1,33 @@
 <template>
   <div class="app">
-    <NavBar />
-    <Carousel />
+    <NavBar v-if="showLayout" />
+    <Carousel v-if="showLayout" />
     <main class="main-content">
-      <div class="content-wrapper">
-        <TagCloud />
-        <ArticleList />
-        <Timeline />
-      </div>
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </main>
-    <FooterBar />
+    <FooterBar v-if="showLayout" />
   </div>
 </template>
 
 <script setup>
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 import { onMounted } from 'vue'
 import { useBlogStore } from './store/blog'
 import NavBar from './components/NavBar.vue'
 import Carousel from './components/Carousel.vue'
-import ArticleList from './components/ArticleList.vue'
-import TagCloud from './components/TagCloud.vue'
-import Timeline from './components/Timeline.vue'
 import FooterBar from './components/Footer.vue'
 
+const route = useRoute()
 const store = useBlogStore()
+
+const showLayout = computed(() => {
+  return route.name === 'Home' || !route.name
+})
 
 onMounted(() => {
   store.initFromStorage()
@@ -40,32 +44,16 @@ onMounted(() => {
 
 .main-content {
   flex: 1;
-  padding: 40px 24px;
   background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
 }
 
-.content-wrapper {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 260px 1fr 220px;
-  gap: 32px;
-  align-items: start;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
 }
 
-@media (max-width: 1199px) {
-  .content-wrapper {
-    grid-template-columns: 1fr 200px;
-  }
-}
-
-@media (max-width: 768px) {
-  .content-wrapper {
-    grid-template-columns: 1fr;
-  }
-  
-  .main-content {
-    padding: 24px 16px;
-  }
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

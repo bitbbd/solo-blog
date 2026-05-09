@@ -20,6 +20,8 @@
         <article 
           v-for="(article, index) in store.sortedArticles" 
           :key="article.id"
+          :data-article-id="article.id"
+          :ref="(el) => { if (el) articleRefs[index] = el }"
           class="article-card"
           :class="{ 'featured': index === 0 && !store.selectedTag }"
           :style="{ '--delay': `${index * 100}ms` }"
@@ -95,15 +97,58 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { useRouter } from 'vue-router'
 import { useBlogStore } from '../store/blog'
 
+const router = useRouter()
 const store = useBlogStore()
 const hoveredArticleId = ref(null)
+const articleRefs = ref([])
+let observer = null
+
+const setupIntersectionObserver = () => {
+  if (observer) {
+    observer.disconnect()
+  }
+  
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const articleId = parseInt(entry.target.dataset.articleId)
+        store.setCurrentArticle(articleId)
+      }
+    })
+  }, {
+    root: null,
+    rootMargin: '-20% 0px -60% 0px',
+    threshold: 0
+  })
+  
+  articleRefs.value.forEach(el => {
+    if (el) {
+      observer.observe(el)
+    }
+  })
+}
+
+watch(() => store.sortedArticles, async () => {
+  await new Promise(resolve => setTimeout(resolve, 100))
+  setupIntersectionObserver()
+}, { deep: true })
+
+onMounted(() => {
+  setupIntersectionObserver()
+})
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect()
+  }
+})
 
 const handleArticleClick = (article) => {
-  store.setCurrentArticle(article.id)
-  console.log('Navigate to article:', article.id)
+  router.push(`/article/${article.id}`)
 }
 
 const handleMouseEnter = (articleId) => {
